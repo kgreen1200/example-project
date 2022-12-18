@@ -1,22 +1,34 @@
+---
+ᴴₒᴴₒᴴₒ: true
+---
+<div align="center" markdown>
+
+![Logo][img_logo_dark]
+![Logo][img_logo_light]
+
 # Example Project
 
-### Documentation
+**Short Project Description**
+
+[**Explore The Docs ❱**][url_documentation]
+
+</div>
 
 ## About Example Project
 
-### Demo
+![Example Screenshot][img_example_screenshot]
 
-### Overview
-
-#### Used By
-
-#### Optimizations
-
-#### Lessons Learned
+> Overview of the project, including inspirations, optimizations, and lessons learned.
 
 ### Features
 
+- Feature 1
+- Feature 2
+- Feature 3
+
 ## Getting Started
+
+To get Example Project up and running, please follow the below instructions.
 
 ### Requirements
 
@@ -28,30 +40,14 @@
 
 ### Configuration
 
-#### Environment Variables
-
 ### Usage
-
-## Support
-
-## FAQ
-
-## Project Components
-
-### Tools & Technologies
-
-### Roadmap
-
-## Contributing
-
-### How To Contribute
-
-### Contributors
-
-## License
-
-## Acknowledgements
 
 ---
 
-@kgreen1200
+<!-- Reference Images -->
+[img_logo_dark]: assets/images/logo_dark_mode.svg#gh-dark-mode-only
+[img_logo_light]: assets/images/logo_light_mode.svg#gh-light-mode-only
+[img_example_screenshot]: assets/images/example_screenshot.png
+
+<!-- Reference URLs -->
+[url_documentation]: https://kgreen1200.github.io/example-project
