@@ -24,7 +24,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: MegaLinter
         id: ml
-        uses: oxsecurity/megalinter@v7
+        uses: oxsecurity/megalinter/flavors/python@v7
         env:
           VALIDATE_ALL_CODEBASE: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
