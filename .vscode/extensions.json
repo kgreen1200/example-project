@@ -26,6 +26,6 @@
         "stoplight.spectral",
         "streetsidesoftware.code-spell-checker",
         "stylelint.vscode-stylelint",
-        "timonwong.shellcheck",
+        "timonwong.shellcheck"
     ]
 }

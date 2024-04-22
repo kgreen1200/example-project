@@ -1,7 +1,7 @@
 {
   "version": "0.2",
   "language": "en",
-  "ignorePaths": [".gitignore", ".config/**", ".github/workflows/**"],
+  "ignorePaths": [".gitignore", ".config/**", ".github/workflows/**", ".vscode/**"],
   "words": [
     "pyproject"
   ]
