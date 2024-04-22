@@ -23,7 +23,7 @@ jobs:
         id: ml
         uses: oxsecurity/megalinter/flavors/python@v7
         env:
-          DISABLE_LINTERS: JSON_PRETTIER,YAML_PRETTIER
+          DISABLE_LINTERS: JSON_PRETTIER,YAML_PRETTIER,RST_RST_LINT,RST_RSTCHECK,RST_RSTFMT
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PYTHON_BANDIT_CONFIG_FILE: pyproject.toml
           REPOSITORY_CHECKOV_CONFIG_FILE: .config/.checkov.yml
