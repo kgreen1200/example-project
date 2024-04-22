@@ -49,3 +49,6 @@ Changelog = "https://github.com/kgreen1200/example-project/blob/main/docs/CHANGE
 
 [tool.setuptools.dynamic]
 version = {attr = "example_project.__version__"}
+
+[tool.bandit]
+exclude_dirs = ["tests"]
