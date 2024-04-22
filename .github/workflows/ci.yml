@@ -22,12 +22,12 @@ jobs:
         id: ml
         uses: oxsecurity/megalinter/flavors/python@v7
         env:
-          VALIDATE_ALL_CODEBASE: true
+          DISABLE_LINTERS: JSON_PRETTIER,YAML_PRETTIER
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PYTHON_BANDIT_CONFIG_FILE: pyproject.toml
-          SPELL_CSPELL_CONFIG_FILE: .config/cspell.json
-          DISABLE_LINTERS: JSON_PRETTIER
           REPOSITORY_CHECKOV_CONFIG_FILE: .config/.checkov.yml
+          SPELL_CSPELL_CONFIG_FILE: .config/cspell.json
+          VALIDATE_ALL_CODEBASE: true
       - name: Archive Production Artifacts
         if: success() || failure()
         uses: actions/upload-artifact@v4
