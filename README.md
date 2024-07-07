@@ -6,4 +6,6 @@
 
 </div>
 
-[gh_issues]: https://github.com/kgreen1200/example-project/issues
+# License
+
+Example Project is licensed under the **Apache License 2.0**.
