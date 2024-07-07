@@ -1,0 +1,7 @@
+pytest
+pytest-cov
+mkdocs-material[git]
+black
+isort
+ruff
+bandit
