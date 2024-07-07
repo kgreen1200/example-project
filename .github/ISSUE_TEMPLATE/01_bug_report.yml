@@ -1,9 +1,13 @@
 name: Bug Report
-description: File a bug report
+description: File a bug report if something isn't work the way you expect it to.
 title: "[Bug]: "
-labels: ["type: bug", "priority: triage"]
+labels: ["type: bug", "priority: triage needed"]
 assignees: ["kgreen1200"]
 body:
+  - type: input
+    attributes:
+      label: Version Information
+      description: What version of Example Project are you using?
   - type: textarea
     attributes:
       label: Current Behavior
@@ -23,6 +27,14 @@ body:
         Please provide the **minimal** steps needed to reproduce the issue.
     validations:
       required: true
+  - type: textarea
+    attributes:
+      label: Other Information
+      description: |
+        Is there any other information that would help with debugging? This can inlude things like
+        environment details, logs, stack traces, or screenshots.
+    validations:
+      required: false
   - type: checkboxes
     attributes:
       label: Pull Request Submission

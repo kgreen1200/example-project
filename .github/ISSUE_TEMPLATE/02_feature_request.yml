@@ -1,0 +1,27 @@
+name: Feature Request
+description: Request a feature that you think would be useful for other users of Example Project
+title: "[Feature Request]: "
+labels: ["type: feature", "priority: triage needed"]
+assignees: ["kgreen1200"]
+body:
+  - type: textarea
+    attributes:
+      label: The Problem
+      description: Please provide a concise description of the problem that would be addressed by this feature request.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: A solution
+      description: |
+        Provide a description of how you would like the solution to the problem to work. Include details such as technical
+        implementations, tradeoffs of the solution, and any potential issues that the solution could run into.
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Pull Request Submission
+      description: If your feature request is accepeted, would you be willing to submit a pull request to fix the issue?
+      options:
+        - label: I am willing to submit a pull request for this feature.
+          required: false
