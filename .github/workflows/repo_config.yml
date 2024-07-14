@@ -1,0 +1,11 @@
+on: [push, workflow_dispatch]
+
+jobs:
+  configure_repo:
+    runs-on: ubuntu-latest
+    name: Configure Repo
+    steps:
+      - name: Hello world action step
+        uses: kgreen1200/github-repository-config-action@v1
+        with:
+          who-to-greet: "Mona the Octocat"
