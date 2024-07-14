@@ -6,6 +6,6 @@ jobs:
     name: Configure Repo
     steps:
       - name: Hello world action step
-        uses: kgreen1200/github-repository-config-action@v1
+        uses: kgreen1200/github-repository-config-action@v0.0.1
         with:
           who-to-greet: "Mona the Octocat"
