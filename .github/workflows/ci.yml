@@ -1,0 +1,37 @@
+---
+name: CIon:
+  push:
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  megalinter:
+    name: MegaLinter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: MegaLinter
+        id: ml
+        uses: oxsecurity/megalinter/flavors/python@v7
+        env:
+          DISABLE_LINTERS: JSON_PRETTIER,YAML_PRETTIER,RST_RST_LINT,RST_RSTCHECK,RST_RSTFMT
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PYTHON_BANDIT_CONFIG_FILE: pyproject.toml
+          REPOSITORY_CHECKOV_CONFIG_FILE: .config/.checkov.yml
+          SPELL_CSPELL_CONFIG_FILE: .config/cspell.json
+          VALIDATE_ALL_CODEBASE: true
+      - name: Archive Production Artifacts
+        if: success() || failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: MegaLinter reports
+          path: |
+            megalinter-reports
+            mega-linter.log

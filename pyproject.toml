@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "example_project"
+description = "An example project for python"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Kevin Green", email = "kgreen1200@gmail.com"}
+]
+requires-python = ">=3.12" # TODO: Update to your minimum version of python support here
+keywords = [] # TODO: Add keywords that are relevant to your project here
+classifiers = [] # TODO: Add classifiers that match your project here https://pypi.org/classifiers/
+dynamic = ["dependencies", "version"]
+
+[project.urls]
+Homepage = "https://kgreen1200.github.io/example-project"
+Documentation = "https://kgreen1200.github.io/example-project"
+Repository = "https://github.com/kgreen1200/example-project"
+Issues = "https://github.com/kgreen1200/example-project/issues"
+Changelog = "https://github.com/kgreen1200/example-project/blob/main/docs/CHANGELOG.md"
+
+[tool.setuptools.dynamic]
+version = {attr = "example_project.__version__"}
+dependencies = { file = ["requirements.txt"]}

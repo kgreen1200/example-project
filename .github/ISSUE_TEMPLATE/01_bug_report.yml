@@ -1,0 +1,45 @@
+---
+name: Bug Report
+description: File a bug report if something isn't work the way you expect it to.
+title: "[Bug]: "
+labels: ["type: bug", "priority: triage needed"]
+assignees: ["kgreen1200"]
+body:
+  - type: input
+    attributes:
+      label: Version Information
+      description: What version of Example Project are you using?
+  - type: textarea
+    attributes:
+      label: Current Behavior
+      description: Describe the problem you are experiencing
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: Describe what you expect to happen instead
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      description: |
+        Please provide the **minimal** steps needed to reproduce the issue.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Other Information
+      description: |
+        Is there any other information that would help with debugging? This can inlude things like
+        environment details, logs, stack traces, or screenshots.
+    validations:
+      required: false
+  - type: checkboxes
+    attributes:
+      label: Pull Request Submission
+      description: If the bug is confirmed, would you be willing to submit a pull request to fix the issue?
+      options:
+        - label: I am willing to submit a pull request for this bug.
+          required: false
